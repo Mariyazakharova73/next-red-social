@@ -1,0 +1,24 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, .12);
+  @apply py-layout
+}
+
+.link {
+  @apply mb-8 block;
+}
+
+.link svg, .icon {
+  @apply text-[#7C7275] duration-300 ease-out transition-colors;
+}
+
+.link svg:hover, .icon:hover {
+  @apply text-white;
+}
+
+.active svg {
+  @apply text-white;
+}
