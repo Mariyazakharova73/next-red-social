@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   border: 1px solid rgba(255, 255, 255, .12);
-  @apply py-layout
+  @apply py-layout px-3
 }
 
 .link {

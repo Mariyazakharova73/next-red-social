@@ -1,4 +1,3 @@
-import Users from '@/components/Users/Users';
 import { Users2, Phone, MessageSquare, Settings } from 'lucide-react';
 
 export enum AppRoutes {
@@ -30,7 +29,7 @@ export const routeConfig = {
     path: RoutePath.chats,
     element: <MessageSquare size={35}/>,
   },
-  [AppRoutes.CHATS]: {
+  [AppRoutes.SETTINGS]: {
     path: RoutePath.settings,
     element: <Settings size={35}/>,
   },

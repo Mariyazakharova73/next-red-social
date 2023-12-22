@@ -6,7 +6,7 @@ const LayoutClient = ({ children }: PropsWithChildren<unknown>) => {
   return (
     <main className={s.layout}>
       <Sidebar />
-      <section>{children}</section>
+      <section className='h-full'>{children}</section>
     </main>
   );
 };

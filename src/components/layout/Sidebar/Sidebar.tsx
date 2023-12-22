@@ -6,8 +6,10 @@ import { Sun } from 'lucide-react';
 import s from './Sidebar.module.css';
 import { routeConfig } from '@/utils/config';345     
 import Link from 'next/link';
-import { clsx } from 'clsx';
+import cn  from 'clsx';
 import { usePathname } from 'next/navigation';
+
+const isLoggedIn =false;
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -19,7 +21,7 @@ const Sidebar = () => {
         {Object.values(routeConfig).map((item) => {
           return (
             <Link
-              className={clsx(s.link, { [s.active]: pathname === item.path })}
+              className={cn(s.link, { [s.active]: pathname === item.path })}
               href={item.path}
               key={item.path}
             >
