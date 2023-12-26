@@ -13,20 +13,17 @@ export const nextAuthOptions: AuthOptions = {
         email: {
           type: 'text',
         },
-        password: {
-          type: 'password',
-        },
+        password: { type: 'password' },
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials.password) return null;
-
+        // Регистрация
         if (credentials.username) {
           try {
             const data = await $fetch.post<{
               user: IUser;
               jwt: string;
-            }>(`/auth/local/register?populate[avatar]=*`, credentials);
-
+            }>(`/auth/local/register`, credentials);
             return {
               id: data.user.id.toString(),
               email: data.user.email,
@@ -40,18 +37,17 @@ export const nextAuthOptions: AuthOptions = {
             });
           }
         }
-
+        // Авторизация
         try {
           const data = await $fetch.post<{
             user: IUser;
             jwt: string;
-          }>(`/auth/local?populate[avatar]=*`, {
+          }>(`/auth/local`, {
             identifier: credentials.email,
             password: credentials.password,
           });
-
           return {
-            id: data.user.id.toString(),
+            id: data.user?.id,
             email: data.user.email,
             avatar: data.user.avatar?.url,
             username: data.user.username,
@@ -70,7 +66,7 @@ export const nextAuthOptions: AuthOptions = {
       return { ...token, ...user };
     },
     session({ session, token, user }) {
-      // session.user = token as User;
+      session.user = token as User;
       return session;
     },
   },

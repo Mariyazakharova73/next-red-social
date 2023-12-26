@@ -1,4 +1,4 @@
-export interface IAuthFormState {
-  email: string;
-  password: string;
+export interface kkkkk {
+	email: string;
+	password: string;
 }
