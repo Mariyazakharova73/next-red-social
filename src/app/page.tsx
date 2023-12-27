@@ -1,9 +1,9 @@
 import React from 'react';
-import Chat from '@/components/chats/Chat';
-import ChatList from '@/components/chats/ChatList';
-import CurrentUser from '@/components/chats/CurrentUser';
 import { Metadata } from 'next';
 import s from './page.module.css';
+import CurrentUser from '@/components/screens/chats/CurrentUser';
+import ChatList from '@/components/screens/chats/ChatList';
+import Chat from '@/components/screens/chats/Chat';
 
 export const metadata: Metadata = {
   title: 'Chat',
