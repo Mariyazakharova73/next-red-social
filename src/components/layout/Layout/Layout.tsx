@@ -2,7 +2,7 @@ import React, { PropsWithChildren } from 'react';
 import Sidebar from '../Sidebar/Sidebar';
 import s from './Layout.module.css';
 import { Toaster } from 'react-hot-toast';
-import MainProvider from './MainProvider';
+import MainProvider from '../MainProvider';
 
 const LayoutClient = ({ children }: PropsWithChildren<unknown>) => {
   return (

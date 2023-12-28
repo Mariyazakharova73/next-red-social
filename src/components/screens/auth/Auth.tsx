@@ -9,7 +9,6 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { kkkkk } from './auth.types';
 
 export interface IAuth {
 	type?: 'Login' | 'Register';
@@ -17,13 +16,13 @@ export interface IAuth {
 
 const Auth = ({ type }: IAuth) => {
 	const [isLoading, setIsLoading] = useState(false);
-	const { register, handleSubmit } = useForm<kkkkk>({
+	const { register, handleSubmit } = useForm({
 		mode: 'onChange',
 	});
 
 	const { push } = useRouter();
 
-	const onSubmit: SubmitHandler<kkkkk> = async data => {
+	const onSubmit: SubmitHandler = async data => {
 		setIsLoading(true);
 		const response = await signIn(
 			'credentials',

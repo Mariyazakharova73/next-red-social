@@ -14,6 +14,7 @@ const CurrentUser = () => {
 				height={50}
 				src={user?.avatar || profileIcon}
 				alt='Аватар.'
+				priority
 			/>
 			<div className='text-sm'>
 				<div>{user?.username}</div>
