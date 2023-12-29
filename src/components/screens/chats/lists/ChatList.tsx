@@ -4,7 +4,7 @@ import { $fetch } from '@/$api/api.fetch';
 import Field from '@/components/ui/field/Field';
 import Loader from '@/components/ui/loader/Loader';
 import { IChat } from '@/types/chat.types';
-import { RoutePath } from '@/utils/config';
+import { RoutePath, userPath } from '@/utils/config';
 import { useQuery } from '@tanstack/react-query';
 import { Search } from 'lucide-react';
 import ChatListItem from './ChatListItem';
@@ -12,7 +12,7 @@ import ChatListItem from './ChatListItem';
 const ChatList = () => {
 	const { data, isLoading } = useQuery({
 		queryKey: ['chats'],
-		queryFn: () => $fetch.get<IChat[]>('/users/me', true),
+		queryFn: () => $fetch.get<IChat[]>(userPath, true),
 	});
 	console.log(data)
 

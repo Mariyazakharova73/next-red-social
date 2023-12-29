@@ -5,3 +5,7 @@ export interface IUser {
   role: string;
   avatar: string;
 }
+
+export interface ResponseFullUser extends IUser {
+  
+}
