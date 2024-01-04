@@ -15,16 +15,17 @@ export interface IChatListItem {
 const ChatListItem: FC<IChatListItem> = ({ data }) => {
 	const { user } = useAuth();
 	const chat = data.attributes;
-	console.log('chat', chat);
+
 	const author = chat?.users?.data.find(
 		u => u.attributes.email !== user?.email
 	);
-	console.log(author, 'author');
+
 	const lastMessage = chat?.messages?.data[chat.messages.data.length - 1];
+
 	return (
 		<Link
 			href={`chat/${data.id}`}
-			className='p-layout flex items-center border-b border-border'
+			className='p-layout flex items-center border-b border-border duration-300 ease-linear transition-colors hover:bg-[#1b1a26]'
 		>
 			<Image
 				className='mr-4'
@@ -40,7 +41,7 @@ const ChatListItem: FC<IChatListItem> = ({ data }) => {
 						{dayjs(lastMessage?.attributes.createdAt).format('HH:mm')}
 					</span>
 				</div>
-				<div className='opacity-30'>{lastMessage?.attributes.text}</div>
+				<div className='opacity-30 mt-1'>{lastMessage?.attributes.text}</div>
 			</div>
 		</Link>
 	);

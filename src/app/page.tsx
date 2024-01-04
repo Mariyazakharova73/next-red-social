@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const ChatPage = () => {
   return (
     <div className={s.grid}>
-      <div className='border-r border-border p-5'>
+      <div className='border-r border-border'>
         <CurrentUser />
         <ChatList />
       </div>

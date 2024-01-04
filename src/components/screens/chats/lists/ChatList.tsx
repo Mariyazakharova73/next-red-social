@@ -22,7 +22,6 @@ const ChatList = () => {
 	});
 
 	const chatsArr = data?.data;
-	console.log(chatsArr)
 
 	const chat = chatsArr?.length ? (
 		chatsArr?.map(chat => {
@@ -36,7 +35,7 @@ const ChatList = () => {
 
 	return (
 		<div>
-			<div className='border-t border-b border-border'>
+			<div className='p-layout border-t border-b border-border'>
 				<Field placeholder='Search chats' Icon={Search} />
 			</div>
 			<div>
