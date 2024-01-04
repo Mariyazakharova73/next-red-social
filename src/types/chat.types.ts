@@ -10,5 +10,15 @@ export interface IMessage {
 export interface IChat {
 	id: string;
 	messages: IMessage[];
-	users: IUser[]
+	users: IUser[];
+}
+
+export interface IStrapiChat {
+	messages: { data: IStrapiResponse<IMessage>[] };
+	users: { data: IStrapiResponse<IUser>[] };
+}
+
+export interface IStrapiResponse<T> {
+	id: number;
+	attributes: T;
 }

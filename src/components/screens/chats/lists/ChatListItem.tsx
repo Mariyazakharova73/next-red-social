@@ -1,39 +1,48 @@
 'use client';
 
 import { useAuth } from '@/hooks/useAuth';
-import { IMessage } from '@/types/chat.types';
-import { IUser } from '@/types/user.types';
+import { IStrapiChat, IStrapiResponse } from '@/types/chat.types';
+import dayjs from 'dayjs';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FC } from 'react';
 import profileIcon from '../profile-icon.png';
 
 export interface IChatListItem {
-	users: IUser[];
-	messages: IMessage[];
+	data: IStrapiResponse<IStrapiChat>;
 }
 
-const ChatListItem: FC<IChatListItem> = ({ users, messages }) => {
+const ChatListItem: FC<IChatListItem> = ({ data }) => {
 	const { user } = useAuth();
-
-	const author = users.find(u => u.email !== user?.email);
-	const lastMessage = messages[messages.length - 1];
+	const chat = data.attributes;
+	console.log('chat', chat);
+	const author = chat?.users?.data.find(
+		u => u.attributes.email !== user?.email
+	);
+	console.log(author, 'author');
+	const lastMessage = chat?.messages?.data[chat.messages.data.length - 1];
 	return (
-		<div className='p-layout flex items-center'>
+		<Link
+			href={`chat/${data.id}`}
+			className='p-layout flex items-center border-b border-border'
+		>
 			<Image
 				className='mr-4'
 				width={45}
 				height={45}
-				src={author?.avatar || profileIcon}
+				src={author?.attributes.avatar || profileIcon}
 				alt='Аватар.'
 			/>
-			<div className='text-sm'>
-				<div>
-					<span>{author?.username}</span>
-					<span>{lastMessage?.createdAt}</span>
+			<div className='text-sm w-full'>
+				<div className='flex items-center justify-between'>
+					<span>{author?.attributes.username}</span>
+					<span className='text-xs opacity-30'>
+						{dayjs(lastMessage?.attributes.createdAt).format('HH:mm')}
+					</span>
 				</div>
-				<div className='opacity-30'>{lastMessage?.text}</div>
+				<div className='opacity-30'>{lastMessage?.attributes.text}</div>
 			</div>
-		</div>
+		</Link>
 	);
 };
 
