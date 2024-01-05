@@ -1,7 +1,7 @@
 export interface IUser {
-  username: string;
-  email: string;
-  confirmed: boolean;
-  role: string;
-  avatar: string;
+	username: string;
+	email: string;
+	confirmed: boolean;
+	role: string;
+	avatar: { url: string };
 }

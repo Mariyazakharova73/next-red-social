@@ -46,6 +46,7 @@ export const nextAuthOptions: AuthOptions = {
             identifier: credentials.email,
             password: credentials.password,
           });
+          console.log(data, 'loginUserData')
           return {
             id: data.user?.id,
             email: data.user.email,

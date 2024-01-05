@@ -1,6 +1,5 @@
 import { MessageSquare, Phone, Settings, Users2 } from 'lucide-react';
 
-
 export const userPath = '/users/me?populate=*'
 
 export enum AppRoutes {

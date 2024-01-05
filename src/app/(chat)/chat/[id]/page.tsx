@@ -1,0 +1,14 @@
+import Chat from '@/components/screens/chats/chat/Chat';
+import { NO_INDEX_PAGE } from '@/utils/constants/seo-constants';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Chat',
+	...NO_INDEX_PAGE,
+};
+
+const ChatPage = () => {
+	return <div className='p-layout'><Chat/></div>;
+};
+
+export default ChatPage;

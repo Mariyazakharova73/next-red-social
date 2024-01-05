@@ -2,8 +2,9 @@
 
 #### О проекте
 
-Социальная сеть. Регистрация и авторизация пользователя осуществляется с помощью библиотеки NextAuth.js. В качестве бекэнда используется Strapi. На главной странице отображается список чатов. Можно просмотреть чат с сообщениями на отдельной странице.
-Можно осуществить поиск по чатам.
+Социальная сеть. Регистрация и авторизация пользователя и выход из аккаунта осуществляется с помощью библиотеки NextAuth.js. В качестве бекэнда используется Strapi. На главной странице отображается список чатов. Можно просмотреть чат с сообщениями на отдельной странице.
+Можно осуществить поиск по сообщениям или имени собеседника (custom hook useDebounce).
+Для работы с формами используется React Hook Form
 
 #### Технологии
 
@@ -12,8 +13,10 @@
   <img height='25px' src="https://img.shields.io/badge/Strapi-20232A??style=plastic&logo=strapi&logoColor=2F2E8B" alt="Strapi.">
   <img height='25px' src="https://img.shields.io/badge/React-20232A??style=plastic&logo=react&logoColor=61DAFB" alt="React.">
   <img height='25px' src="https://img.shields.io/badge/TypeScript-20232A??style=plastic&logo=typescript&logoColor=3178C6" alt="TypeScript.">
+  <img height='25px' src="https://img.shields.io/badge/Tailwind CSS-20232A??style=for-the-badge&logo=Tailwind CSS&logoColor=06B6D4" alt="Tailwind CSS">
   <img height='25px' src="https://img.shields.io/badge/WebSocket-20232A??style=plastic" alt="WebSocket.">
   <img height='25px' src="https://img.shields.io/badge/React Query-20232A??style=plastic&logo=reactquery&logoColor=FF4154" alt="reactquery.">
+  <img height='25px' src="https://img.shields.io/badge/React Hook Form-20232A??style=for-the-badge&logo=reacthookform&logoColor=EC5990" alt="React Hook Fo
 
 </div>
 
