@@ -1,6 +1,6 @@
 import { MessageSquare, Phone, Settings, Users2 } from 'lucide-react';
 
-export const userPath = '/users/me?populate=*'
+export const MESSAGES_PATH = '/messages';
 
 export enum AppRoutes {
 	MAIN = 'main',
