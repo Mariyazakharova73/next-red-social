@@ -3,7 +3,7 @@ import { MessageSquare, Phone, Settings, Users2 } from 'lucide-react';
 export const MESSAGES_PATH = '/messages';
 
 export enum AppRoutes {
-	MAIN = 'main',
+	//MAIN = 'main',
 	FRIENDS = 'friends',
 	CALL = 'call',
 	CHATS = 'chats',
@@ -14,10 +14,10 @@ export enum AppRoutes {
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
-	[AppRoutes.MAIN]: '/',
+	//[AppRoutes.MAIN]: '/',
 	[AppRoutes.FRIENDS]: '/friends',
 	[AppRoutes.CALL]: '/call',
-	[AppRoutes.CHATS]: '/chats',
+	[AppRoutes.CHATS]: '/',
 	[AppRoutes.SETTINGS]: '/settings',
 	[AppRoutes.NOT_FOUND]: '*',
 	[AppRoutes.LOGIN]: '/login',

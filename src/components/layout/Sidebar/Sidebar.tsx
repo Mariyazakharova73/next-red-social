@@ -1,6 +1,6 @@
 'use client';
 import { useAuth } from '@/hooks/useAuth';
-import { routeConfig } from '@/utils/config';
+import { RoutePath, routeConfig } from '@/utils/config';
 import cn from 'clsx';
 import { Sun } from 'lucide-react';
 import Image from 'next/image';
@@ -17,7 +17,11 @@ const Sidebar = () => {
 		<aside className={s.sidebar}>
 			{isLoggedIn ? (
 				<>
-					<Image src={icon} alt='logo.' priority width={45} height={45} />
+					<Link href={RoutePath.chats}>
+						<Image 
+						//className='w-11 h-11' 
+						src={icon} alt='logo.' priority width={44} height={44} />
+					</Link>
 					<div>
 						{Object.values(routeConfig).map(item => {
 							return (

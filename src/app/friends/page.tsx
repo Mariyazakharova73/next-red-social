@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import React from 'react';
+import Friends from './Friends';
 
 export const metadata: Metadata = {
   title: 'Friends',
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const FriendsPage = () => {
-  return <div>FriendsPage</div>;
+  return <Friends/>;
 };
 
 export default FriendsPage;

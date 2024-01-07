@@ -7,7 +7,7 @@ import dayjs from 'dayjs';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
-import profileIcon from '../profile-icon.png';
+import profileIcon from '@/assets/profile-icon.png';
 
 export interface IChatListItem {
 	chat: IChat;

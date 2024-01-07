@@ -53,7 +53,6 @@ export const useReactQuerySubscription = () => {
 	}, [queryClient]);
 
 	const send = (input: WebSocketEvent) => {
-		console.log('3SEND', input);
 		socket.current?.emit('client-message', input);
 	};
 

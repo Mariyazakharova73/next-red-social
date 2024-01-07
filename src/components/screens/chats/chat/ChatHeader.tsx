@@ -2,7 +2,7 @@ import { IUser } from '@/types/user.types';
 import { getImageUrl } from '@/utils/get-image-url';
 import Image from 'next/image';
 import { FC } from 'react';
-import profileIcon from '../profile-icon.png';
+import profileIcon from '@/assets/profile-icon.png';
 
 export interface ChatHeaderProps {
 	user?: IUser;

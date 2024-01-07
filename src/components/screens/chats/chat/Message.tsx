@@ -4,7 +4,7 @@ import { getImageUrl } from '@/utils/get-image-url';
 import dayjs from 'dayjs';
 import Image from 'next/image';
 import { FC } from 'react';
-import profileIcon from '../profile-icon.png';
+import profileIcon from '@/assets/profile-icon.png';
 
 export interface IMessageProps {
 	message: IMessage;
@@ -26,7 +26,7 @@ const Message: FC<IMessageProps> = ({ message }) => {
 				<Image
 					src={getImageUrl(message?.owner?.avatar?.url) || profileIcon}
 					alt='Avatar'
-					className='rounded-full w-14 h-14'
+					className='rounded-full w-14 h-14 object-cover object-center'
 					width={56}
 					height={56}
 				/>
