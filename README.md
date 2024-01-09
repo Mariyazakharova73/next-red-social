@@ -16,7 +16,7 @@
   <img height='25px' src="https://img.shields.io/badge/Tailwind CSS-20232A??style=for-the-badge&logo=Tailwind CSS&logoColor=06B6D4" alt="Tailwind CSS">
   <img height='25px' src="https://img.shields.io/badge/WebSocket-20232A??style=plastic" alt="WebSocket.">
   <img height='25px' src="https://img.shields.io/badge/React Query-20232A??style=plastic&logo=reactquery&logoColor=FF4154" alt="reactquery.">
-  <img height='25px' src="https://img.shields.io/badge/React Hook Form-20232A??style=for-the-badge&logo=reacthookform&logoColor=EC5990" alt="React Hook Fo
+  <img height='25px' src="https://img.shields.io/badge/React Hook Form-20232A??style=for-the-badge&logo=reacthookform&logoColor=EC5990" alt="React Hook Form">
 
 </div>
 
