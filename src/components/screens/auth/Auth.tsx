@@ -45,7 +45,7 @@ const Auth = ({ type }: IAuth) => {
 			return;
 		}
 		setIsLoading(false);
-		push(RoutePath.main);
+		push(RoutePath.chats);
 	};
 
 	return (

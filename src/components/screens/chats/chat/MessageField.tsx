@@ -72,7 +72,6 @@ const MessageField = () => {
 				type='text'
 			/>
 			<button
-				// isLoading={isLoading}
 				disabled={!isValid}
 				type='submit'
 				className='hover:text-primary transition-colors'

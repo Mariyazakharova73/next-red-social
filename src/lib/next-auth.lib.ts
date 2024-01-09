@@ -53,7 +53,7 @@ export const nextAuthOptions: AuthOptions = {
             avatar: data.user.avatar?.url,
             username: data.user.username,
             jwt: data.jwt,
-          } as User;
+          };
         } catch (e) {
           return Promise.reject({
             message: 'Login error, not valid data!',
