@@ -53,5 +53,5 @@
 <!-- [Ссылка на проект red social media](https://mariyazakharova73.github.io/react-dress/)-->
 
 <div align="center">
-  <img width="575" alt="Приложение." src="./src/assets/chat.png>
+  <img width="575" alt="Приложение." src="./src/assets/chat.png"/>
 </div>
